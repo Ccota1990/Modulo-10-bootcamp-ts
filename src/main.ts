@@ -1,3 +1,4 @@
+import { pintarPersonajes } from "./personajes";
 import "./style.css";
 
-console.log("Hello Typescript!");
+document.addEventListener("DOMContentLoaded", pintarPersonajes);
