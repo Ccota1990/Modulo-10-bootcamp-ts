@@ -5,5 +5,5 @@ export interface Personaje {
   especialidad: string;
   habilidades: string[];
   amigo: string;
-  imagen:string;
+  imagen: string;
 }

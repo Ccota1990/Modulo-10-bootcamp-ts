@@ -26,10 +26,15 @@ export const pintarPersonajesFiltrados = (personajes: Personaje[]): void => {
     if (listado) {
       // Limpiar el resultado para no repetir al darle al boton
         listado.innerHTML = '';
-        personajes.forEach(personaje => {
-            const contenedorPersonaje = crearContenedorPersonaje(personaje);
-            listado.appendChild(contenedorPersonaje);
-        });
+        // Mostrar mensaje si no hay resultados
+        if (personajes.length ===0){
+          listado.innerHTML ='<p>No se han encontrado resultados</p>'
+        }else {
+          personajes.forEach(personaje => {
+              const contenedorPersonaje = crearContenedorPersonaje(personaje);
+              listado.appendChild(contenedorPersonaje);
+            });
+          }
     } else {
         throw new Error("No se ha encontrado el contenedor del listado");
     }
