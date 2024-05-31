@@ -28,7 +28,7 @@ export const pintarPersonajesFiltrados = (personajes: Personaje[]): void => {
         listado.innerHTML = '';
         // Mostrar mensaje si no hay resultados
         if (personajes.length ===0){
-          listado.innerHTML ='<p>No se han encontrado resultados</p>'
+          listado.innerHTML ='<p></p><p style="font-weight: bold; margin-top: 20px; font-size: x-large;">No se han encontrado resultados</p>'
         }else {
           personajes.forEach(personaje => {
               const contenedorPersonaje = crearContenedorPersonaje(personaje);
